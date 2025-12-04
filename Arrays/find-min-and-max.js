@@ -1,3 +1,5 @@
+// Find Min and Max element from array
+
 let arr = [1, 4, 2, 6, 8, 3, 9]
 
 
