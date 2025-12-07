@@ -17,14 +17,27 @@ let nums = [1, 2, 2, 3, 1, 4];
 // the maximum. So the number of elements in the array with maximum
 // frequency is 5.
 
+//Method 1(Using Map)
 function maxFrequncy(nums) {
-  let map = new Map();
+    let map = new Map();
 
-  for (let num in nums) {
-    map.set(num, (map.get(num) || 0) + 1);
-  }
+    for (let num in nums) {
+        map.set(num, (map.get(num) || 0) + 1);
+    }
 
-  return map;
+    return map;
 }
 
-console.log(maxFrequncy([1, 2, 2, 3, 1, 4]));
+// Method 2 ( Using Object)
+
+function maxEleFrequency(nums) {
+    let obj = {};
+
+    for (let num in nums) {
+        obj[num] = (obj[num] || 0) + 1;
+    }
+
+    return obj;
+}
+
+console.log(maxEleFrequency([1, 2, 2, 3, 1, 4]));
